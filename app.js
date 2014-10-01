@@ -41,6 +41,8 @@ function capitalizeFirstLetter(string) {
 };
 // function that returns a num length array of unique strings from words array
 function sentenceMaker(num) {
+  //remove previous element
+  $( '.eraser' ).empty();
   var newArr = [];
   shuffle(words);
   //gives you an array of num length number of random unique numbers
@@ -53,10 +55,11 @@ function sentenceMaker(num) {
   newArr.splice(0, 1, capitalFirst);
   var sentence = newArr.join(' ') + '.';
   console.log(sentence);
-  return sentence
+  // return sentence
+  $( '#sentence' ).append("<p>" + sentence + "</p>");
+
 };
 
-sentenceMaker(11);
 
 
 

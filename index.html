@@ -3,9 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Wisconsin Ipsum</title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src='app.js'></script>
 </head>
 <body>
-		
+	<input type="number" min="1" max="20"/>
+	<button>Enter a number</button>	
+	<div class="eraser" id="sentence">
+	</div>
+	<script>
+	$(document).ready(function(){
+	  $("button").click(function(){
+	    sentenceMaker($(":input").val());
+	  });
+	});
+	</script>	
 </body>
 </html>
+
