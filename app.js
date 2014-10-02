@@ -111,11 +111,3 @@ function paragraphMaker(p) {
  }
 
 };
-
-
-
-
-
-
-
-
