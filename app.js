@@ -88,6 +88,8 @@ function sentenceGen() {
 };
 // function that returns paragraphs
 function paragraphMaker(p) {
+  // clear out any old paragraphs
+  $( '.erase-pars' ).empty();
   // initialize the paragraphs array
   var paragraphs = [];
   // p = the number paragraphs
@@ -104,10 +106,12 @@ function paragraphMaker(p) {
     }
   }
   for (var i = 0; i < paragraphs.length; i++) {
-  console.log(paragraphs[i].join(' '));
+  // console.log(paragraphs[i].join(' '));
+  $( '#paragraph' ).append("<p>" + paragraphs[i].join(' ') + "</p>");
  }
+
 };
-paragraphMaker(3);
+
 
 
 

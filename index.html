@@ -7,14 +7,23 @@
 	<script src='app.js'></script>
 </head>
 <body>
+	Number of words in the sentence:
 	<input type="number" min="1" max="20"/>
-	<button>Enter a number</button>	
+	<button id="sent-gen">X</button>	
 	<div class="eraser" id="sentence">
+	</div>
+	Number of paragraphs:
+	<input id="pars" type="number" min="1" max="20"/>
+	<button id="par-gen">X</button>
+	<div class="erase-pars" id="paragraph">
 	</div>
 	<script>
 	$(document).ready(function(){
-	  $("button").click(function(){
+	  $("#sent-gen").click(function(){
 	    sentenceMaker($(":input").val());
+	  });
+	  $("#par-gen").click(function(){
+	    paragraphMaker($("#pars").val());
 	  });
 	});
 	</script>	
